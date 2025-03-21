@@ -2,16 +2,16 @@
     "builds": [
         {
             "src": "package.json",
-            "use": "@vercel/static-build",
-            "config": {
-                "zeroConfig": true
-            }
+            "use": "@vercel/static-build"
         }
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/"
+            "src": "/admin",
+            "dest": "/admin"
         }
-    ]
+    ],
+    "env": {
+        "DATABASE_URL": "@database_url"
+    }
 }
